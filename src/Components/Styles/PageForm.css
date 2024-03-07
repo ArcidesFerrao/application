@@ -1,0 +1,132 @@
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(200vh);
+    }
+}
+
+.slideOutLeft {
+    animation: slideOutLeft 1s ease-in forwards;
+
+}
+@keyframes slideInLeft {
+    from {
+        transform: translateX(200vh);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slideInLeft {
+    animation: slideInLeft 1.5s ease-in-out forwards;
+
+}
+
+.formSheet {
+    /* transition: all .5s ease-in; */
+
+    width: 848px;
+    height: 1056px;
+    border-radius: 2px;
+
+    box-shadow: rgba(0, 0, 0, 0.4) -2px 25px 35px, rgba(0, 0, 0, 0.23) 1px 6px 6px; 
+
+    background-color: #d0d0d0;
+    color: #262626;
+
+    margin: 100px 20px;
+    padding: 100px;
+    
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 35% 65%;
+    /* grid-auto-rows: auto; */
+    grid-template-rows: 26% 28% 26% 20%;
+    grid-template-areas: "header header"
+        "contact experience"
+        "objective education"
+        "language skill";
+}
+
+.formHeader {
+    grid-area: header;
+
+    display: grid;
+    grid-template-rows: 70% 30%;
+    grid-auto-columns: 100%;
+    color: #292929;
+}
+
+.headerName {
+    font-size: 70px;
+    font-weight: 700;
+    margin: 20px 0;
+    
+}
+.headerOccupation {
+    font-size: 32px;
+    font-weight: 600;
+}
+.headerName,
+.headerOccupation {
+    background: none;
+    border: none;
+    border-bottom: solid 1px #292929;
+    
+}
+
+.formContact {
+    grid-area: contact;
+}
+
+.formContact h2 {
+    font-size: x-large;
+    color: #292929;
+    padding: 10px 0;
+}
+
+textarea {
+    resize: none;
+    background: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, .2) 5px 5px 200px 40px;
+    border: solid 0.8px #272727;
+    padding: 5px;
+    font-size: small;
+}
+.formContact input {
+    font-size: medium;
+    font-weight: 400;
+    background: none;
+    border: none;
+    border-bottom: solid 1px #292929;
+    padding-bottom: 0.4rem;
+}
+
+.buttonSubmit {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    padding: 10px 15px;
+    width: 150px;
+
+    font-size: 24px;
+    font-weight: 600;
+    color: #d0d0d0;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    border-left: solid 2px #666666;
+    border-bottom: solid 2px #666666;
+    border-top: solid 2px #666666;
+    box-shadow: rgba(0, 0, 0, .3) 5px 6px 10px 4px;
+    
+    background-color: #1f644a;
+}

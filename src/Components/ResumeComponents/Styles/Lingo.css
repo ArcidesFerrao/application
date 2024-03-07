@@ -1,0 +1,41 @@
+.cvLingo {
+    grid-area: language;
+
+    padding: 5px 0;
+    margin-right: 25px;
+    border-top: solid #d0d0d0 5px;
+
+    background: none;
+
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 40% 60%;
+    grid-template-areas: "lingo lingo"
+        "lin lev";
+}
+
+.lingTitle {
+    grid-area: lingo;
+}
+
+.lang {
+    grid-area: lin;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+}
+.lang h4 {
+    padding: 4px 0;
+    border-bottom: solid 1px ;
+}
+
+.lingLevel {
+    grid-area: lev;
+    display: flex;
+    flex-direction: column;
+}
+
+.lingLevel h4 {
+    padding: 5px 0;
+    font-style: italic;
+}

@@ -1,0 +1,39 @@
+.formExperience input {
+    font-size: medium;
+    font-weight: 400;
+    background: none;
+    border: none;
+    border-bottom: solid 1px #292929;
+    padding-bottom: 0.3rem;
+}
+
+
+.formExperience {
+    grid-area: experience;
+
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-areas: "xp ."
+        "desc pl"
+        "desc dt";
+}
+
+.xpTitle {
+    grid-area: xp;
+}
+.xpTitle h2 {
+    font-size: x-large;
+    color: #292929;
+    padding: 10px 0;
+}
+.expPlace {
+    grid-area: pl;
+}
+
+.workDate {
+    grid-area: dt;
+}
+
+.workDesc {
+    grid-area: desc;
+}

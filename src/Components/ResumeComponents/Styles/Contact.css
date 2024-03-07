@@ -1,0 +1,21 @@
+.cvContact {
+    grid-area: contact;
+    padding: 5px 0;
+    border-top: solid 5px;
+    margin-right: 25px;
+    display: grid;
+    background: none;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 70%;
+    grid-template-areas: "con"
+        "det";
+}
+
+.conTitle {
+    grid-area: con;
+}
+
+.contDescription {
+    grid-area: det;
+}
+

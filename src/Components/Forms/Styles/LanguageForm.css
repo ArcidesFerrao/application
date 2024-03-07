@@ -1,0 +1,17 @@
+.formLinguas h2 {
+        font-size: x-large;
+        color: #292929;
+        padding: 10px 0;
+}
+
+.formLinguas select {
+    
+        font-size: medium;
+        font-weight: 400;
+        background: none;
+        border: none;
+        border-bottom: solid 1px #292929;
+    margin-bottom: 5px;
+    padding-bottom: 0.4rem;
+    width: 150px;
+}

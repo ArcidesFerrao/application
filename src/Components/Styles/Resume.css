@@ -1,0 +1,135 @@
+@font-face {
+    font-family: "UniversBold";
+    src: url("./fonts/Univers/UniversLTStd-Bold.otf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "UniversLight";
+    src: url("./fonts/Univers/Univers-light-normal.ttf");
+    /* font-weight: 400; */
+}
+@font-face {
+    font-family: "UniversBody";
+    src: url("./fonts/Univers/UniversLTStd.otf");
+    /* font-weight: 400; */
+}
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Kode+Mono:wght@400..700&family=Montserrat:wght@100..900&family=Quicksand:wght@300..700&display=swap');
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(-200vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes slideOutTop {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-200vh);
+    }
+}
+.moveOut {
+    animation: slideOutTop 1s ease-in forwards;
+    /* left: 0; */
+}
+.slideInTop {
+    animation: slideInTop 2s ease-in-out ;
+
+}
+
+.resume {
+    /* transition: all 2s ease-in; */
+    width: 848px;
+    height: 1056px;
+    margin: 100px 20px;
+    padding: 60px 50px; 
+
+    box-shadow: rgb(0, 0, 0) 0px 20px 100px, rgba(0, 0, 0, 0.23) 0px 6px 6px; 
+
+
+    color: #d0d0d0;
+    background-color: #262626;
+    border: solid 2px #666666;
+    border-radius: 5px;
+    
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 35% 60%;
+    grid-auto-rows: auto;
+    /* grid-template-rows: 28% 30% 28% 15%; */
+    grid-template-areas: "header header"
+        "contact experience"
+        "objective education"
+        "language skill";
+}
+
+.cvHeader {
+    grid-area: header;
+}
+
+.cvHeader h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-top: 5px;
+
+    letter-spacing: 0.1rem;
+}
+
+h1 {
+    font-family: "UniversBold";
+    font-size: 64px;
+    font-weight: 700;
+    color: #f4f5fa;
+    letter-spacing: 0.02rem;
+}
+
+h2 {
+    font-family: "UniversBody";
+    font-size: 28px;
+    font-weight: 600;
+    color: #d0d0d0;
+}
+h3 {
+    text-transform: uppercase;
+    font-family: "UniversBody";
+    font-size: 16px;
+    font-weight: 200;
+    color: #d0d0d0;
+}
+h4 {
+    font-family: "UniversBody";
+    font-size: medium;
+    letter-spacing: 0.05rem;
+    color: rgba(215, 215, 215, 0.6);
+    font-weight: 200;
+}
+
+button {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    padding: 10px 15px;
+    width: 150px;
+
+    font-size: 24px;
+    color: #d0d0d0;
+
+    border: none;
+    border-radius: 3px 0 0 3px;
+    border-left: solid 2px #666666;
+    border-bottom: solid 2px #666666;
+    border-top: solid 2px #666666;
+    box-shadow: rgba(0, 0, 0, .3) 5px 6px 10px 4px;
+    
+    background-color: #474747;
+}
+

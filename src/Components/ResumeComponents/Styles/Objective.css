@@ -1,0 +1,22 @@
+.cvObjective {
+    grid-area: objective;
+    padding: 5px 0;
+    border-top: solid 5px;
+    padding-right: 25px;
+
+    background: none;
+    
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 70%;
+    grid-template-areas: "con"
+        "det";
+}
+
+.objTitle {
+    grid-area: con;
+}
+
+.objtDescription {
+    grid-area: det;
+}
