@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Styles/Resume.css';
 
 import Contact from './ResumeComponents/Contact';
@@ -21,12 +21,10 @@ export default function Resume(props) {
       resOut.classList.remove('slideInTop');
       resOut.classList.add('moveOut');
         
-    // props.getMove(!props.move);
-
-    setTimeout(() => {
-      props.getShow(!props.show);
-    }, 1000);
-  };
+      setTimeout(() => {
+        props.getShow(!props.show);
+      }, 1000);
+    };
 
   return (
     <div className='resume slideInTop' id='res' >
@@ -37,7 +35,8 @@ export default function Resume(props) {
         <Contact 
           city={props.city}
           email={props.email}
-
+          git={props.git}
+          phone={props.phone}
         />
         <Experience
             workPlace={props.workPlace}
@@ -46,7 +45,6 @@ export default function Resume(props) {
         />
         <Objective 
           objDescription={props.objDescription} 
-          
         />
         <Education className='fromRight'
           schoolName={props.schoolName}
@@ -57,7 +55,9 @@ export default function Resume(props) {
           language={props.language}
           fluent={props.fluent}
         />
-        <button className='editButton b' onClick={handleClick}>Edit</button>
+        <button className='editButton b' 
+          onClick={handleClick}
+        >Edit</button>
     </div>
   )
 }

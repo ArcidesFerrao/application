@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './Styles/PageForm.css';
 
 import { useFormContext } from "react-hook-form";
 import ConnectForm from './ConnectForm';
 
+import ContactForm from './Forms/ContactForm';
 import ExperienceForm from './Forms/ExperienceForm';
 import ObjectiveForm from './Forms/ObjectiveForm';
 import EducationForm from './Forms/EducationForm';
@@ -18,7 +19,6 @@ export default function PageForm(props) {
         formSlide.classList.remove('slideInLeft');
         formSlide.classList.add('slideOutLeft');
     }
-
 
     return (
 
@@ -40,24 +40,8 @@ export default function PageForm(props) {
                             {...register('profession')}
                         />
                     </div>
-                    <div className="formContact slideInLeft">
-                        <h2>Contact</h2>
-                        <input 
-                            type="text" 
-                            className='formCity' 
-                            placeholder='City: Maputo, MZ' 
-                            {...register('city')}
-                            maxLength="22"
-                        />
-                        <input 
-                            type="email" 
-                            className='formEmail' 
-                            placeholder='Email: ...@gmail.com'
-                            {...register('email')}
-                            maxLength="22"
-                        />
-                    </div>
-
+                    
+                    <ContactForm />
                     <ExperienceForm />
                     <ObjectiveForm />
                     <EducationForm />

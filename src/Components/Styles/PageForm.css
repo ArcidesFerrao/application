@@ -111,16 +111,6 @@
     
 }
 
-.formContact {
-    grid-area: contact;
-}
-
-.formContact h2 {
-    font-size: x-large;
-    color: #555555;
-    padding: 10px 0;
-}
-
 textarea {
     resize: none;
     background: none;
@@ -130,14 +120,7 @@ textarea {
     padding: 5px;
     font-size: small;
 }
-.formContact input {
-    font-size: medium;
-    font-weight: 400;
-    background: none;
-    border: none;
-    border-bottom: solid 1px #292929;
-    padding-bottom: 0.4rem;
-}
+
 
 .buttonSubmit {
     position: absolute;

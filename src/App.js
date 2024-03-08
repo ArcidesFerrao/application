@@ -2,8 +2,8 @@ import './App.css';
 import PageForm from './Components/PageForm';
 import Resume from './Components/Resume';
 
-import { useEffect, useState } from 'react';
-import { Form, FormProvider, useForm, useFormContext } from "react-hook-form";
+import { useState } from 'react';
+import { FormProvider, useForm } from "react-hook-form";
 
 
 
@@ -25,8 +25,6 @@ function App() {
     workPlace: "",
   });
 
-  // const [dateWork, setDateWork] = useState();
-  // const [dateSchool, setDateSchool] = useState();
   const [show, setShow] = useState(false);
   const [move, setMove] = useState(false);
 
@@ -41,18 +39,20 @@ function App() {
       setShow(!show);
     }, 1000);
   }
-  
-
 
   return (
+
     <div className="Application" id="Application">
       {!show ? (
+
         <FormProvider {...methods} >
           <form id='information' onSubmit={methods.handleSubmit(onSubmit)}>
             <PageForm move={move}/>
           </form>
         </FormProvider>
+
       ) : (
+
         <div >
           <Resume
             person={person.fullName} 
@@ -79,6 +79,7 @@ function App() {
             getMove={move => setMove(move)}
           />
         </div>
+        
       )}      
     </div>
   );
