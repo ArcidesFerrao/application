@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/application/static/css/main.1940a1b1.css",
+    "main.js": "/application/static/js/main.91bac044.js",
+    "static/js/592.01c852f1.chunk.js": "/application/static/js/592.01c852f1.chunk.js",
+    "static/media/UniversLTStd-Bold.otf": "/application/static/media/UniversLTStd-Bold.34d755ac0774d4908a2b.otf",
+    "static/media/UniversLTStd.otf": "/application/static/media/UniversLTStd.5e1f132656185ec403eb.otf",
+    "static/media/Univers-light-normal.ttf": "/application/static/media/Univers-light-normal.3093d3b72a1e96d61f36.ttf",
+    "index.html": "/application/index.html",
+    "main.1940a1b1.css.map": "/application/static/css/main.1940a1b1.css.map",
+    "main.91bac044.js.map": "/application/static/js/main.91bac044.js.map",
+    "592.01c852f1.chunk.js.map": "/application/static/js/592.01c852f1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1940a1b1.css",
+    "static/js/main.91bac044.js"
+  ]
+}
