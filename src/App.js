@@ -11,22 +11,22 @@ function App() {
   const methods = useForm();
 
   const [person, setPerson] = useState({
-    fullName: "Henry Ford",
-    city: "London",
-    profession: "Software Developer",
-    phone: "+25882123456789",
-    email: "henry@ford.com",
+    fullName: "",
+    city: "",
+    profession: "",
+    phone: "",
+    email: "",
     git: "",
-    dateSchool:"02-2024",
-    dateWork: "01-2024",
+    schoolDate:"",
+    workDate: "",
     fluent:"",
-    school: "Harvard",
-    skill: "React Js",
-    workPlace: "DevOps",
+    school: "",
+    skill: "",
+    workPlace: "",
   });
 
-  const [dateWork, setDateWork] = useState();
-  const [dateSchool, setDateSchool] = useState();
+  // const [dateWork, setDateWork] = useState();
+  // const [dateSchool, setDateSchool] = useState();
   const [show, setShow] = useState(false);
   const [move, setMove] = useState(false);
 
@@ -34,7 +34,6 @@ function App() {
   
   const onSubmit = data => {
     console.log(data);
-    // console.log(data.date);
     const pageBack = document.getElementById('Application');
     pageBack.classList.add('active');
     setTimeout(() => {
@@ -72,8 +71,8 @@ function App() {
             skillDescription={person.skillDescription}
             language={person.language}
             fluent={person.level}
-            dateWork={dateWork}
-            dateSchool={dateSchool}
+            workDate={person.workDate}
+            schoolDate={person.schoolDate}
             show={show}
             getShow={show => setShow(show)}
             pageBackground={pageBack}
