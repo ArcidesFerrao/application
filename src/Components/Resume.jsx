@@ -39,17 +39,25 @@ export default function Resume(props) {
           email={props.email}
 
         />
-        <Experience 
+        <Experience
             workPlace={props.workPlace}
-            // workDescription={props.workDescription}
+            workDescription={props.workDescription}
+            workDate={props.workDate}
         />
-        <Objective />
-        <Education />
+        <Objective 
+          objDescription={props.objDescription} 
+          
+        />
+        <Education className='fromRight'
+          schoolName={props.schoolName}
+          schoolDate={props.schoolDate}
+          degree={props.degree}
+        />
         <Lingo 
           language={props.language}
           fluent={props.fluent}
         />
-        <button className='editButton' onClick={handleClick}>Edit</button>
+        <button className='editButton b' onClick={handleClick}>Edit</button>
     </div>
   )
 }

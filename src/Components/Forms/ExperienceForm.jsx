@@ -9,7 +9,7 @@ export default function ExperienceForm() {
   return (
     <ConnectForm >
         {({register}) => 
-            <div className="formExperience">
+            <div className="formExperience slideInRight">
                 <div className='xpTitle'>
                     <h2>Experience</h2>
                 </div>
@@ -17,7 +17,7 @@ export default function ExperienceForm() {
                     <input 
                         type="text" 
                         className='workPlace' 
-                        placeholder='Work place'
+                        placeholder='Work place:'
                         {...register('workPlace')}
                     />
                 </div>
@@ -26,6 +26,8 @@ export default function ExperienceForm() {
                         type="text" 
                         className='expDate' 
                         placeholder='Date: 03-2024' 
+                        {...register('workDate')}
+                        maxlength="7"
                     />
                 </div>
                 <div className="workDesc">

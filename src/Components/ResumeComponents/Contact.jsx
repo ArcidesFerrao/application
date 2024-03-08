@@ -5,7 +5,7 @@ export default function Contact(props) {
 
 
   return (
-    <div className="cvContact">
+    <div className="cvContact fromLeft">
         <div className="conTitle">
             <h2>Contact</h2>
         </div>

@@ -5,7 +5,7 @@ export default function Experience(props) {
     console.log(props);
     
     return (
-        <div className="cvExperience">
+        <div className="cvExperience fromRight">
             <div className="expTitle">
                 <h2>Experience</h2>
             </div>
@@ -13,12 +13,14 @@ export default function Experience(props) {
                 <h3>{props.workPlace}</h3>
             </div>
             <div className="detailDate">
-                <h3 className="cvDate">
+                <h3>{props.workDate}</h3>
+                {/* <h3 className="cvDate">
                     2014-2015
-                </h3>
+                </h3> */}
             </div>
             <div className="expDescription">
-                <h4>At the internship the main task was problem solving, taking care of every technological detais that needs to be addressed</h4>
+                {/* <h4>At the internship the main task was problem solving, taking care of every technological detais that needs to be addressed</h4> */}
+                <h4>{props.workDescription}</h4>
             </div>
 
         </div>

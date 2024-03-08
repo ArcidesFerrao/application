@@ -14,7 +14,7 @@
 }
 @keyframes slideInLeft {
     from {
-        transform: translateX(200vh);
+        transform: translateX(-200vh);
     }
 
     to {
@@ -22,8 +22,35 @@
     }
 }
 
+@keyframes fromRight {
+    from {
+        transform: translateX(100vh);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+.b {
+    animation: fromRight 5s ease-out;
+}
+@keyframes slideInTop {
+    from {
+        transform: translateY(-200vh);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+.slideInTop {
+    animation: slideInTop 2.5s ease-in-out ;
+}
+.firstDown {
+    animation: slideInTop 2s ease-out;
+}
 .slideInLeft {
-    animation: slideInLeft 1.5s ease-in-out forwards;
+    animation: slideInLeft 2.5s ease-in-out forwards;
 
 }
 
@@ -62,7 +89,8 @@
     display: grid;
     grid-template-rows: 70% 30%;
     grid-auto-columns: 100%;
-    color: #292929;
+    color: rgba(0, 0, 0, 0.4);
+    
 }
 
 .headerName {
@@ -89,7 +117,7 @@
 
 .formContact h2 {
     font-size: x-large;
-    color: #292929;
+    color: #555555;
     padding: 10px 0;
 }
 
@@ -129,4 +157,8 @@ textarea {
     box-shadow: rgba(0, 0, 0, .3) 5px 6px 10px 4px;
     
     background-color: #1f644a;
+}
+
+h2 {
+    color: #555555;
 }

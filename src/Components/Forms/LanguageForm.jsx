@@ -13,7 +13,7 @@ export default function LanguageForm() {
   return (
     <ConnectForm>
       {({register}) => 
-        <div className='formLinguas'>
+        <div className='formLinguas slideInLeft'>
           <h2>Languages</h2>
           <div className='picklanguage'>
               <Idiomas  />
@@ -24,7 +24,7 @@ export default function LanguageForm() {
                 id="scheech" 
                 {...register('level')}
               >
-                  <option value="none" selected disabled hidden>Level</option>
+                  <option defaultValue="none" disabled hidden>Level:</option>
                   <option value="native">Native</option>
                   <option value="fluent">Fluent</option>
                   <option value="proficient">Proficient</option>

@@ -12,24 +12,11 @@ import LanguageForm from './Forms/LanguageForm';
 
 export default function PageForm(props) {
     const { register } = useFormContext();
-    
-    
-    // useEffect(() => {
-    //     const formSlide = document.getElementById('formsSheet');
         
-    //     if (props.move) {
-    //         formSlide.classList.add('slideInLeft');
-    //     } else {
-    //         formSlide.classList.remove('slideInLeft');
-
-    //     }
-    // }, [props.move])
-    
     const handleClick = () => {
         const formSlide = document.getElementById('formsSheet');
         formSlide.classList.remove('slideInLeft');
         formSlide.classList.add('slideOutLeft');
-        
     }
 
 
@@ -37,34 +24,37 @@ export default function PageForm(props) {
 
         <ConnectForm >
             {({register}) => 
-                <div className='formSheet slideInLeft' id='formsSheet'> 
+                <div className='formSheet fromRight' id='formsSheet'> 
                     <div className="formHeader"> 
                         <input 
                             type="text" 
-                            className='headerName' 
-                            placeholder='John Doe' 
+                            className='headerName slideInTop' 
+                            placeholder='Name: John Doe' 
                             {...register('fullName')}
+                            maxLength="16"
                         />
                         <input 
                             type="text" 
-                            className='headerOccupation' 
-                            placeholder='Front-End Developer'
+                            className='headerOccupation firstDown' 
+                            placeholder='Occupaction: Front-End Developer'
                             {...register('profession')}
                         />
                     </div>
-                    <div className="formContact">
+                    <div className="formContact slideInLeft">
                         <h2>Contact</h2>
                         <input 
                             type="text" 
                             className='formCity' 
-                            placeholder='Maputo, MZ' 
+                            placeholder='City: Maputo, MZ' 
                             {...register('city')}
+                            maxLength="22"
                         />
                         <input 
                             type="email" 
                             className='formEmail' 
-                            placeholder='cidesferrao@gmail.com'
+                            placeholder='Email: ...@gmail.com'
                             {...register('email')}
+                            maxLength="22"
                         />
                     </div>
 
@@ -74,7 +64,7 @@ export default function PageForm(props) {
                     <LanguageForm />
 
                     <input 
-                        className="buttonSubmit" 
+                        className="buttonSubmit b" 
                         type="submit" 
                         value='Submit' 
                         onClick={handleClick}
@@ -82,6 +72,5 @@ export default function PageForm(props) {
                 </div>
             }
         </ConnectForm>
-
-  )
+    )
 }

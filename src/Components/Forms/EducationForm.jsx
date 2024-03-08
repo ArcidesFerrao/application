@@ -10,7 +10,7 @@ export default function EducationForm() {
   return (
     <ConnectForm >
         {({register}) => 
-            <div className='formEducation'>
+            <div className='formEducation fromRight'>
                 <div className='edu'>
                     <h2>Education</h2>
                 </div>
@@ -18,7 +18,7 @@ export default function EducationForm() {
                     <input 
                         type="text" 
                         className='schoolName' 
-                        placeholder='School Name'
+                        placeholder='School Name:'
                         {...register('schoolName')}
                     />
                 </div>
@@ -27,13 +27,15 @@ export default function EducationForm() {
                         type="text" 
                         className='eDate' 
                         placeholder='Date: 03-2024'
+                        {...register('schoolDate')}
+                        maxlength="7"
                     />
                 </div>
                 <div className="eduDegree">
                     <input 
                         type="text" 
                         className='eDegree' 
-                        placeholder='Degree' 
+                        placeholder='Degree:' 
                         {...register('degree')}
                     />            
                 </div>

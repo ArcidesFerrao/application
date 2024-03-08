@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useFormContext } from 'react-hook-form';
 
 const ConnectForm = ({ children }) => {

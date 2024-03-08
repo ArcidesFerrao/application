@@ -9,14 +9,14 @@ export default function ObjectiveForm() {
   return (
     <ConnectForm >
       {({register}) => 
-        <div className='formObjective'>
+        <div className='formObjective slideInLeft'>
           <h2>Objective</h2>
           <textarea 
             name="formObjectives" 
             id="formObjectives" 
             cols="25" 
             rows="7" 
-            placeholder='tell us about your goals'
+            placeholder='tell us about your goals...'
             {...register('objDescription')} 
           ></textarea>    
         </div>

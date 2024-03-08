@@ -15,7 +15,7 @@ export default function Idiomas() {
         name="languages" 
         {...register('language')}
       >
-          <option selected disabled hidden>Language</option>
+          <option selected disabled hidden>Language:</option>
           <option value="af">Afrikaans</option>
           <option value="sq">Albanian - shqip</option>
           <option value="am">Amharic - አማርኛ</option>
