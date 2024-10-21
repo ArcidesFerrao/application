@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Styles/ContactForm.css';
 
 import { useFormContext } from 'react-hook-form';
-// import PhoneInput from 'react-phone-number-input';
 import ConnectForm from '../ConnectForm';
 
 
 export default function ContactForm() {
     const { register } = useFormContext();
-    // const [value, setValue] = useState();
 
   return (
     <ConnectForm >

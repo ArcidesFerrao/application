@@ -40,7 +40,6 @@ export default function ExperienceForm() {
                         {...register('workDescription')}
                     ></textarea>
                 </div>
-                {/* <input type="text" className='expDescription' placeholder=''/> */}
             </div>
         }
     </ConnectForm>
