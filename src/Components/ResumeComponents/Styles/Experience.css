@@ -1,34 +1,36 @@
 .cvExperience {
-    grid-area: experience;
-    border-top: solid #d0d0d0 5px;
-    display: grid;
-    grid-template-rows: 18% 12% 70% ;
-    grid-template-columns: 80% 20%;
-    grid-template-areas: "title title"
-        "detail date"
-        "description description"
-        ;
-    padding: 5px 0;
+  grid-area: experience;
+  border-top: solid #d0d0d0 5px;
+  display: grid;
+  gap: 0.4rem;
+  justify-content: space-between;
+  grid-template-rows: 18% 12% 70%;
+  grid-template-columns: 80% 20%;
+  grid-template-areas:
+    "title title"
+    "detail date"
+    "description description";
+  padding: 5px 0;
 }
 
 .expTitle {
-    grid-area: title;
+  grid-area: title;
 }
 
 .cvDetail {
-    grid-area: detail;
+  grid-area: detail;
 }
 
 .detailDate {
-    grid-area: date;
-    color: #666666;
+  grid-area: date;
+  color: #666666;
 }
 .cvDate {
-    font-family: "UniversLight";
-    font-size: 12px;
-    font-size: medium;
-    font-weight: 300;
+  font-family: "UniversLight";
+  font-size: 12px;
+  font-size: medium;
+  font-weight: 300;
 }
 .expDescription {
-    grid-area: description;
+  grid-area: description;
 }

@@ -1,36 +1,46 @@
 .cvEducation {
-    grid-area: education;
-    border-top: solid #d0d0d0 5px;
-    display: grid;
-    /* grid-template-rows: 20% 18% 60% ; */
-    grid-auto-rows: max-content;
-    grid-template-columns: 80% 20%;
-    grid-template-areas: "title title"
-        "detail date"
-        "description description"
-        ;
-    padding: 5px 0;
+  grid-area: education;
+  border-top: solid #d0d0d0 5px;
+  display: grid;
+  gap: 0.4rem;
+  /* grid-template-rows: 20% 18% 60% ; */
+  grid-auto-rows: max-content;
+  grid-template-areas:
+    "title"
+    "first"
+    "second";
+  padding: 5px 0;
 }
 
+.first-sc,
+.second-sc {
+  display: grid;
+  gap: 0.4rem;
+  justify-content: space-between;
+  /* grid-template-columns: 80% 20%; */
+  grid-template-areas:
+    "detail date"
+    "description description";
+}
 .edTitle {
-    grid-area: title;
+  grid-area: title;
 }
 
 .cvDetail {
-    grid-area: detail;
+  grid-area: detail;
 }
 
 .detailDate {
-    grid-area: date;
+  grid-area: date;
 }
 
 .detailDate h3 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    color: #d0d0d0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #d0d0d0;
 }
 
 .edDegree {
-    grid-area: description;
-    padding-top: 5px;
+  grid-area: description;
+  padding-top: 5px;
 }

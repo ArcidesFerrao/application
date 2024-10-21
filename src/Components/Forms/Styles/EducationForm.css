@@ -1,41 +1,75 @@
 .formEducation {
-    grid-area: education;
-
-    display: grid;
-    grid-auto-rows: max-content;
-    grid-template-areas: "t t"
-        "sc sc"
-        "deg dat";
+  grid-area: education;
+  transition: all 1s ease-out;
+  gap: 1rem;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-areas:
+    "t"
+    "scOne"
+    "scTwo";
 }
 
 .edu {
-    grid-area: t;
+  grid-area: t;
 }
 .edu h2 {
-    font-size: x-large;
-    color: #555555;
-    padding: 10px 0;
+  font-size: x-large;
+  color: #555555;
+  padding: 10px 0;
 }
+
+.first-school {
+  grid-area: scOne;
+  gap: 0.4rem;
+
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-areas:
+    "sc addB"
+    "deg dat";
+}
+
+.add-button {
+  grid-area: addB;
+  justify-self: end;
+}
+.add-button button {
+  padding: 0.2rem 0.4rem;
+  font-size: 16px;
+  /* color: #d0d0d0; */
+  /* border: none; */
+  border-radius: 3px 0 0 3px;
+  border: solid 0.4px #272727;
+}
+.second-school {
+  grid-area: scTwo;
+  gap: 0.4rem;
+  display: grid;
+  grid-auto-rows: max-content;
+  grid-template-areas:
+    "sc addB"
+    "deg dat";
+}
+
 .edSchool {
-    grid-area: sc;
-
+  grid-area: sc;
 }
-
 
 .edDate {
-    grid-area: dat;
+  grid-area: dat;
 }
 
 .eduDegree {
-    grid-area: deg;
+  grid-area: deg;
 }
 
 .formEducation input {
-    font-size: medium;
-    font-weight: 400;
-    background: none;
-    border: none;
-    border-bottom: solid 1px #292929;
-    padding-bottom: 0.4rem;
-    margin-top: 5px;
+  font-size: medium;
+  font-weight: 400;
+  background: none;
+  border: none;
+  border-bottom: solid 1px #292929;
+  padding-bottom: 0.4rem;
+  margin-top: 5px;
 }

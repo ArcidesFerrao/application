@@ -7,21 +7,33 @@ export default function Education(props) {
         <div className="edTitle">
             <h2>Education</h2>
         </div>
-        <div className="cvDetail">
-            {/* <h3>ITC - Instituto de Transportes e Comunicacoes</h3> */}
-            <h3>{props.schoolName}</h3>
+
+        <div className="first-sc">
+
+            <div className="cvDetail">
+                <h3>{props.schoolName}</h3>
+            </div>
+            <div className="detailDate">
+                <h3>{props.schoolDate}</h3>
+            </div>
+            <div className="edDegree">
+                <h4>{props.degree}</h4>
+            </div>
         </div>
-        <div className="detailDate">
-            <h3>{props.schoolDate}</h3>
-            
-            {/* <h3 className="cvDate">
-                2011-2014
-            </h3> */}
-        </div>
-        <div className="edDegree">
-            {/* <h4>Tecnico de Sistemas Informaticos</h4> */}
-            <h4>{[props.degree]}</h4>
-        </div>
+
+        {props.schoolNameNd && props.schoolDateNd && props.degreeNd && <div className='second-sc'>
+                <div className="cvDetail">
+                    <h3>{props.schoolNameNd}</h3>
+                </div>
+                <div className="detailDate">
+                    <h3>{props.schoolDateNd}</h3>
+                </div>
+                <div className="edDegree">
+                    <h4>{props.degreeNd}</h4>
+                </div>
+            </div>
+
+        }
 
     </div>
   )

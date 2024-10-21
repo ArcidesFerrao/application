@@ -14,7 +14,8 @@ import LanguageForm from './Forms/LanguageForm';
 export default function PageForm(props) {
     const { register } = useFormContext();
         
-    const handleClick = () => {
+    const handleClick = (event) => {
+        // event.preventDefault();
         const formSlide = document.getElementById('formsSheet');
         formSlide.classList.remove('slideInLeft');
         formSlide.classList.add('slideOutLeft');

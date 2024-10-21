@@ -1,11 +1,9 @@
-import './App.css';
-import PageForm from './Components/PageForm';
-import Resume from './Components/Resume';
+import "./App.css";
+import PageForm from "./Components/PageForm";
+import Resume from "./Components/Resume";
 
-import { useState } from 'react';
+import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-
-
 
 function App() {
   const methods = useForm();
@@ -13,74 +11,73 @@ function App() {
   const [person, setPerson] = useState({
     fullName: "",
     city: "",
+    objDescription: "",
     profession: "",
-    phone: "",
     email: "",
     git: "",
-    schoolDate:"",
+    degree: "",
+    degreeNd: "",
+    schoolDate: "",
+    schoolDateNd: "",
+    language: "",
+    level: "",
+    schoolName: "",
+    schoolNameNd: "",
     workDate: "",
-    fluent:"",
-    school: "",
-    skill: "",
+    workDescription: "",
     workPlace: "",
   });
 
   const [show, setShow] = useState(false);
   const [move, setMove] = useState(false);
 
-  const pageBack = document.getElementById('Application');
-  
-  const onSubmit = data => {
+  const pageBack = document.getElementById("Application");
+
+  const onSubmit = (data) => {
     console.log(data);
-    const pageBack = document.getElementById('Application');
-    pageBack.classList.add('active');
+    const pageBack = document.getElementById("Application");
+    pageBack.classList.add("active");
     setTimeout(() => {
       setPerson(data);
       setShow(!show);
     }, 1000);
-  }
+  };
 
   return (
-
     <div className="Application" id="Application">
       {!show ? (
-
-        <FormProvider {...methods} >
-          <form id='information' onSubmit={methods.handleSubmit(onSubmit)}>
-            <PageForm move={move}/>
+        <FormProvider {...methods}>
+          <form id="information" onSubmit={methods.handleSubmit(onSubmit)}>
+            <PageForm move={move} />
           </form>
         </FormProvider>
-
       ) : (
-
-        <div >
+        <div>
           <Resume
-            person={person.fullName} 
-            profession={person.profession} 
-            phoneNumber={person.phone} 
+            person={person.fullName}
+            city={person.city}
+            objDescription={person.objDescription}
+            profession={person.profession}
             email={person.email}
             gitHub={person.git}
-            city={person.city}
-            jobTitle={person.jobTitle}
-            workPlace={person.workPlace}
-            location={person.location}
-            workDescription={person.workDescription}
-            degree={person.degree}
-            skill={person.skill}
-            school={person.school}
-            skillDescription={person.skillDescription}
             language={person.language}
             fluent={person.level}
+            workPlace={person.workPlace}
             workDate={person.workDate}
+            workDescription={person.workDescription}
+            degree={person.degree}
+            degreeNd={person.degreeNd}
+            schoolName={person.schoolName}
+            schoolNameNd={person.schoolNameNd}
             schoolDate={person.schoolDate}
+            schoolDateNd={person.schoolDateNd}
             show={show}
-            getShow={show => setShow(show)}
+            getShow={(show) => setShow(show)}
+            getMove={(move) => setMove(move)}
             pageBackground={pageBack}
-            getMove={move => setMove(move)}
           />
         </div>
-        
-      )}      
+      )}
     </div>
   );
 }

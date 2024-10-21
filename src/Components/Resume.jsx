@@ -50,7 +50,12 @@ export default function Resume(props) {
           schoolName={props.schoolName}
           schoolDate={props.schoolDate}
           degree={props.degree}
+          degreeNd={props.degreeNd}
+          schoolNameNd={props.schoolNameNd}
+          schoolDateNd={props.schoolDateNd}
+
         />
+
         <Lingo 
           language={props.language}
           fluent={props.fluent}
